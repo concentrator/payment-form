@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'),
+       local('OpenSans-Bold'),
+       url(../fonts/OpenSans-Bold.woff2) format('woff2'),
+       url(../fonts/OpenSans-Bold.woff) format('woff');
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  font-size: $default-font-size;
+  line-height: $default-line-height;
+  color: $color-grey-dark-1;
+}

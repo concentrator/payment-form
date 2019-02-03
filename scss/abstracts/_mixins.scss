@@ -1,0 +1,24 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// MEDIA QUERIES
+
+/*
+320 - 720           Phone
+720 - 1000          Tablet
+1000 - infinity     Desktop (default style)
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 45em) { @content; }  // 720px
+  }
+  @if $breakpoint == tablet {
+    @media only screen and (max-width: 62.5em) { @content; } // 1000px
+  }
+}
