@@ -1,0 +1,27 @@
+{
+  "name": "payment-form",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "build": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/concentrator/payment-form.git"
+  },
+  "author": "Dmitry Iovlev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/concentrator/payment-form/issues"
+  },
+  "homepage": "https://github.com/concentrator/payment-form#readme",
+  "devDependencies": {
+    "terser": "^3.14.1",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1"
+  },
+  "dependencies": {
+    "jquery-1.8": "^1.8.3"
+  }
+}
