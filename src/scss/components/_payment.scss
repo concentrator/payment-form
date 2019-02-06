@@ -1,0 +1,33 @@
+.payment {
+
+  &__info {
+    border-collapse: collapse;
+    width: 32rem;
+    margin-bottom: 2.5rem;
+
+    caption {
+      text-align: left;
+      margin-bottom: 1rem;
+    }
+
+    th {
+      font-weight: 400;
+      text-align: left;
+      padding: .5rem 0;
+
+    }
+
+    td {
+      color: $color-grey-dark-1;
+    }
+  }
+
+  &__heading {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 2.2rem;
+    line-height: 2.6rem;
+    font-weight: 700;
+    color: $color-grey-dark-2;
+    margin-bottom: 2rem;
+  }
+}
