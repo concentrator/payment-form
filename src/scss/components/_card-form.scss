@@ -1,0 +1,156 @@
+.card-form {
+
+  // min-height: 31.5rem;
+  // border-top: 1px solid transparent;
+
+  &__card {
+    position: relative;
+    min-height: 25.6rem;
+    width: 100%;
+  }
+
+  &__fieldset {
+    border: none;
+
+    &--validity {
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  &__label {
+    margin-bottom: 0.5rem;
+  }
+
+  &__select {
+    display: block;
+    position: relative;
+    z-index: 1;
+    // height: 43px;
+    border: 1px solid $color-grey-light-2;
+    background-color: $color-white;
+    background-size: 12px;
+    overflow: hidden;
+
+    &--month {
+      width: 7rem;
+      float: left;
+      margin-right: 0.9rem;
+    }
+
+    &--year {
+      width: 8.6rem;
+      float: left;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 1.1rem;
+      right: 1.1rem;
+      width: 11px;
+      height: 11px;
+      border-left: 1px solid $color-grey-light-3;
+      border-bottom: 1px solid $color-grey-light-3;
+      transform: rotate(-45deg);
+    }
+
+    select {
+      width: 100%;
+      // height: 32px;
+      padding: 1rem;
+      padding-left: 1.4rem;
+      padding-right: 3.6rem;
+      border: none;
+      box-shadow: none;
+      background: transparent;
+      background-image: none;
+      border-radius: 0;
+      font: inherit;
+      color: $color-grey-dark-1;
+
+      overflow: hidden;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+
+    & select::-ms-expand {
+      display: none; /* remove default arrow on ie10 and ie11 */
+    }
+  }
+
+  &__input {
+    padding: 1rem;
+    font: inherit;
+    color: $color-grey-light-3;
+    border: 1px solid $color-grey-light-2;
+    background-color: $color-white;
+
+    &--digit {
+      display: block;
+      width: 6.5rem;
+      text-align: center;
+      margin-right: 0.9rem;
+      float: left;
+    }
+
+    &--name {
+      width: 100%;
+    }
+
+    &--cvv {
+      padding-right: 4.2rem;
+      padding-left: 2rem;
+      width: 100%;
+    }
+  }
+
+  &__side {
+    padding: 1.4rem;
+    border: 1px solid $color-grey-light-2;
+    background-color: $color-grey-light-1;
+    border-radius: 1.5rem;
+
+    &--front {
+      position: relative;
+      // position: absolute;
+      // top: 0;
+      // left: 0;
+      width: 35rem;
+      padding-top: 1.8rem;
+      z-index: 1;
+    }
+
+    &--back {
+      position: absolute;
+      top: 2rem;
+      right: 1.6rem;
+      width: 37rem;
+      height: 23.6rem;
+      text-align: right;
+
+      &::before {
+        content: "";
+        display: block;
+        height: 4.2rem;
+        width: auto;
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+        margin-right: -1.4rem;
+        background-color: $color-grey-light-2;
+      }
+    }
+  }
+
+  &__number {
+    @include clearfix;
+    margin-bottom: 1rem;
+  }
+
+  &__cvv {
+    display: inline-block;
+    width: 13.8rem;
+    text-align: left;
+  }
+}
