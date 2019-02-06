@@ -1,0 +1,36 @@
+.button {
+  position: relative;
+  display: inline-block;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  font-weight: 700;
+  padding: 1rem 3rem;
+  border: 1px solid transparent;
+  border-radius: 30px;
+  cursor: pointer;
+  background: none;
+  box-shadow: none;
+  overflow: hidden;
+
+  &--blue {
+    color: $color-white;
+    background-image: linear-gradient(
+      to bottom,
+      $color-blue-light,
+      $color-blue-dark
+    );
+
+    &:hover {
+      background-image: linear-gradient(
+        to top,
+        $color-blue-light,
+        $color-blue-dark
+      );
+    }
+
+    &:active {
+      color: rgba($color-white, 0.5);
+    }
+  }
+}
