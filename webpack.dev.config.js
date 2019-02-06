@@ -12,10 +12,10 @@ module.exports = {
   },
   mode: 'development',
   devServer: {
-      contentBase: path.resolve(__dirname, './dist'),
-      index: 'index.html',
-      writeToDisk: true,
-      port: 9000
+    watchContentBase: true,
+    contentBase: path.resolve(__dirname, './dist'),
+    index: 'index.html',
+    port: 9000
   },
   module: {
     rules: [
@@ -25,7 +25,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              outputPath: 'img/'
+              outputPath: './img/'
             }
           }
         ]
@@ -36,7 +36,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              outputPath: 'fonts/'
+              outputPath: './fonts/'
             }
           }
         ]
@@ -77,12 +77,12 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin('dist'),
     new MiniCssExtractPlugin({
-      filename: 'css/style.css'
+      filename: './css/style.css'
     }),
     new HtmlWebpackPlugin({
       title: 'Оплата банковской картой',
       description: 'Страница платежа',
-      template: 'src/index.hbs'
+      template: './src/index.hbs'
     })
   ]
 };
