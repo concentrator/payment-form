@@ -1,0 +1,52 @@
+.navigation {
+  width: 33.3334%;
+  max-width: 32rem;
+  float: left;
+
+  &__list {
+    list-style: none;
+    border-top: 1px solid $color-black-dark-3;
+  }
+
+  &__item {
+
+  }
+
+  &__link {
+    display: block;
+    padding: 2.5rem 3rem;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    color: $color-white;
+    background-color: $color-black-light-1;
+    transition: all 0.2s ease;
+
+    &--active {
+      color: $color-grey-blue-2;
+      background-color: $color-black-light-2;
+      border-top: 1px solid rgba($color-black-light-4, 0.5);
+    }
+
+    &--dark {
+      background-color: $color-black-dark-2;
+    }
+
+    &--logout {
+      color: $color-grey-blue-2;
+      border-top: 1px solid rgba($color-black-light-4, 0.42);
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-white;
+      background-color: $color-black-light-2;
+    }
+
+    &:active {
+      color: rgba($color-white, 0.5);
+      background-color: $color-black-light-2;
+    }
+  }
+}

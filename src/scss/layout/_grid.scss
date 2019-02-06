@@ -1,4 +1,5 @@
 .container {
+  @include clearfix;
   max-width: $grid-width;
-  margin: 0 auto;
+  margin: 8rem auto;
 }

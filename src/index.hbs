@@ -12,106 +12,121 @@
       <!-- Навигация -->
       <nav class="navigation">
         <ul class="navigation__list">
-          <li class="navigation__item"><a class="navigation__link" href="#">Личный кабинет</a></li>
-          <li class="navigation__item"><a class="navigation__link" href="#">Платежи</a></li>
-          <li class="navigation__item"><a class="navigation__link" href="#">История платежей</a></li>
-          <li class="navigation__item"><a class="navigation__link" href="#">Настройки</a></li>
-          <li class="navigation__item"><a class="navigation__link" href="#">Выйти</a></li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Личный кабинет</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link navigation__link--active" href="#">Платежи</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">История платежей</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link navigation__link--dark" href="#">Настройки</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link navigation__link--logout navigation__link--dark " href="#">Выйти</a>
+          </li>
         </ul>
       </nav> <!-- Конец Навигация -->
 
       <!-- Основной блок -->
-      <main class="content payment">
-        <table class="payment__info">
-          <caption>Информация по оплате:</caption>
-          <tbody>
-            <tr>
-              <th scope="row">Номер счета:</th>
-              <td>87123658716587</td>
-            </tr>
-            <tr>
-              <th scope="row">Сумма платежа:</th>
-              <td>100 руб.</td>
-            </tr>
-          </tbody>
-        </table>
-        <h2 class="payment__heading">Данные банковской карты</h2>
+      <div class="content">
 
-        <!-- Форма оплаты картой -->
+        <main class="main payment">
+          <table class="payment__info">
+            <caption>Информация по оплате:</caption>
+            <tbody>
+              <tr>
+                <th scope="row">Номер счета:</th>
+                <td>87123658716587</td>
+              </tr>
+              <tr>
+                <th scope="row">Сумма платежа:</th>
+                <td>100 руб.</td>
+              </tr>
+            </tbody>
+          </table>
+          <h2 class="payment__heading">Данные банковской карты</h2>
 
-        <form action="#" class="payment__form card-form">
+          <!-- Форма оплаты картой -->
 
-          <!-- Лицевая часть карты -->
+          <form action="#" class="payment__form card-form">
 
-          <div class="card-form__front">
+            <!-- Лицевая часть карты -->
 
-            <fieldset class="card-form__number">
-              <legend class="card-form__label">Номер карты</legend>
-              <input class="card-form__input card-form__input--digit" type="text" name="card-1"
-                placeholder="0000" autocomplete="off" maxlength="4">
-              <input class="card-form__input card-form__input--digit" type="text" name="card-2"
-                placeholder="0000" autocomplete="off" maxlength="4">
-              <input class="card-form__input card-form__input--digit" type="text" name="card-3"
-                placeholder="0000" autocomplete="off" maxlength="4">
-              <input class="card-form__input card-form__input--digit" type="text" name="card-4"
-                placeholder="0000" autocomplete="off" maxlength="4">
-            </fieldset>
+            <div class="card-form__front">
 
-            <fieldset class="card-form__valid">
-              <legend class="card-form__label">Срок действия</legend>
+              <fieldset class="card-form__number">
+                <legend class="card-form__label">Номер карты</legend>
+                <input class="card-form__input card-form__input--digit" type="text" name="card-1"
+                  placeholder="0000" autocomplete="off" maxlength="4">
+                <input class="card-form__input card-form__input--digit" type="text" name="card-2"
+                  placeholder="0000" autocomplete="off" maxlength="4">
+                <input class="card-form__input card-form__input--digit" type="text" name="card-3"
+                  placeholder="0000" autocomplete="off" maxlength="4">
+                <input class="card-form__input card-form__input--digit" type="text" name="card-4"
+                  placeholder="0000" autocomplete="off" maxlength="4">
+              </fieldset>
 
-              <label for="card-month" class="visually-hidden">Месяц</label>
-              <select class="card-form__select" id="card-month" name="card-month">
-                <option value="1">01</option>
-                <option value="2">02</option>
-                <option value="3">03</option>
-                <option value="4" selected>04</option>
-                <option value="5">05</option>
-                <option value="6">06</option>
-                <option value="7">07</option>
-                <option value="8">08</option>
-                <option value="9">09</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-              </select>
+              <fieldset class="card-form__valid">
+                <legend class="card-form__label">Срок действия</legend>
 
-              <label for="card-year" class="visually-hidden">Год</label>
-              <select class="card-form__select" id="card-year" name="card-year">
-                <option value="2019" selected>2018</option>
-                <option value="2019">2019</option>
-                <option value="2020">2020</option>
-                <option value="2021">2021</option>
-                <option value="2022">2022</option>
-                <option value="2023">2023</option>
-                <option value="2024">2024</option>
-                <option value="2025">2025</option>
-              </select>
-            </fieldset>
+                <label for="card-month" class="visually-hidden">Месяц</label>
+                <select class="card-form__select" id="card-month" name="card-month">
+                  <option value="1">01</option>
+                  <option value="2">02</option>
+                  <option value="3">03</option>
+                  <option value="4" selected>04</option>
+                  <option value="5">05</option>
+                  <option value="6">06</option>
+                  <option value="7">07</option>
+                  <option value="8">08</option>
+                  <option value="9">09</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                </select>
 
-            <label class="visually-hidden" for="card-holder">Имя владельца</label>
-            <input class="card-form__input card-form__input--name" id="card-holder" name="card-holder" type="text" placeholder="Держатель карты">
-          </div> <!-- Конец Лицевая часть карты -->
+                <label for="card-year" class="visually-hidden">Год</label>
+                <select class="card-form__select" id="card-year" name="card-year">
+                  <option value="2019" selected>2018</option>
+                  <option value="2019">2019</option>
+                  <option value="2020">2020</option>
+                  <option value="2021">2021</option>
+                  <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+                  <option value="2024">2024</option>
+                  <option value="2025">2025</option>
+                </select>
+              </fieldset>
 
-          <!-- Обратная часть карты -->
+              <label class="visually-hidden" for="card-holder">Имя владельца</label>
+              <input class="card-form__input card-form__input--name" id="card-holder" name="card-holder" type="text" placeholder="Держатель карты">
+            </div> <!-- Конец Лицевая часть карты -->
 
-          <div class="card-form__back">
-            <label class="card-form__label" for="card-cvv">Код CVV2 / CVC2</label>
-            <input class="card-form__input card-form__input--cvv" type="text"
-              id="card-cvv" placeholder="000" maxlength="3">
-          </div> <!-- Конец Обратная часть карты -->
+            <!-- Обратная часть карты -->
 
-          <button class="button button--blue" type="submit">Оплатить</button>
-        </form> <!-- Конец Форма оплаты картой -->
+            <div class="card-form__back">
+              <label class="card-form__label" for="card-cvv">Код CVV2 / CVC2</label>
+              <input class="card-form__input card-form__input--cvv" type="text"
+                id="card-cvv" placeholder="000" maxlength="3">
+            </div> <!-- Конец Обратная часть карты -->
 
-        <!-- Блок подробности -->
-        <div class="content__details">
-          <p>Исходя из астатической системы координат Булгакова, соединение стабильно. Краевая часть артезианского бассейна, которая в настоящее время находится ниже уровня моря, ослабляет систематический уход. Лисичка традиционно трансформирует прецессионный годовой параллакс.</p>
-          <p>Выклинивание абсолютно аккумулирует твердый pадиотелескоп Максвелла.</p>
-          <p>Алмаз слагает горст. Делювий длительно колеблет лазерный подвижный объект.</p>
-          <p>Устойчивость, например, параллельна. Аргумент перигелия определяет боксит. Проекция вертикально дает уходящий диабаз. Если пренебречь малыми величинами, то видно, что угол крена покрывает вибрирующий волчок, что обусловлено не только первичными неровностями эрозионно-тектонического рельефа поверхности кристаллических пород, но и проявлениями долее поздней блоковой тектоники. Засветка неба заставляет иначе взглянуть на то, что такое волчок.</p>
-        </div> <!-- Конец Блок подробности -->
-      </main> <!--  Конец Основной блок -->
+            <button class="button button--blue" type="submit">Оплатить</button>
+          </form> <!-- Конец Форма оплаты картой -->
+        </main>
+
+        <!-- Блок подвал -->
+        <footer class="footer">
+          <p class="footer__paragraph">Исходя из астатической системы координат Булгакова, соединение стабильно. Краевая часть артезианского бассейна, которая в настоящее время находится ниже уровня моря, ослабляет систематический уход. Лисичка традиционно трансформирует прецессионный годовой параллакс.</p>
+          <p class="footer__paragraph">Выклинивание абсолютно аккумулирует твердый pадиотелескоп Максвелла.</p>
+          <p class="footer__paragraph">Алмаз слагает горст. Делювий длительно колеблет лазерный подвижный объект.</p>
+          <p class="footer__paragraph">Устойчивость, например, параллельна. Аргумент перигелия определяет боксит. Проекция вертикально дает уходящий диабаз. Если пренебречь малыми величинами, то видно, что угол крена покрывает вибрирующий волчок, что обусловлено не только первичными неровностями эрозионно-тектонического рельефа поверхности кристаллических пород, но и проявлениями долее поздней блоковой тектоники. Засветка неба заставляет иначе взглянуть на то, что такое волчок.</p>
+        </footer> <!-- Конец Блок подвал -->
+
+      </div> <!--  Конец Основной блок -->
+
     </div> <!-- Конец Контейнер -->
 
   </body>

@@ -1,0 +1,15 @@
+.footer {
+  padding: 3rem;
+  background-color: $color-grey-dark-1;
+  border-bottom: 1px solid $color-black-light-3;
+
+  &__paragraph {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    color: $color-grey-blue-3;
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+}
