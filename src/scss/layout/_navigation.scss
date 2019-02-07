@@ -1,15 +1,91 @@
 .navigation {
+  position: relative;
   width: 33.3334%;
   max-width: 32rem;
   float: left;
 
+  @include respond(phone) {
+    width: 100%;
+    max-width: 100%;
+    min-height: 5rem;
+  }
+
+  &__button {
+    display: none;
+    position: absolute;
+    right: 3rem;
+    top: 0.5rem;
+    width: 4rem;
+    height: 4rem;
+    border: none;
+    background: none;
+
+    @include respond(phone) {
+      display: block;
+    }
+  }
+
+  &__icon {
+    top: 50%;
+    margin-top: -1px;
+
+    &,
+    &::before,
+    &::after {
+      display: block;
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      background-color: $color-grey-light-1;
+      transition: all 0.2s ease;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+    }
+
+    &::before {
+      top: -1rem;
+    }
+
+    &::after {
+      top: 1rem;
+    }
+  }
+
+  &__button--opened &__icon {
+    background-color: transparent;
+
+    &::before {
+      top: 0;
+      transform: rotate(135deg);
+    }
+
+    &::after {
+      top: 0;
+      transform: rotate(-135deg);
+    }
+  }
+
   &__list {
     list-style: none;
     border-top: 1px solid $color-black-dark-3;
-  }
 
-  &__item {
 
+    @include respond(phone) {
+      display: none;
+      position: absolute;
+      top: 5rem;
+      left: 0;
+      width: 75%;
+      z-index: 10;
+
+      &--opened {
+        display: block;
+        animation: moveInLeft 0.5s ease;
+      }
+    }
   }
 
   &__link {
@@ -23,6 +99,10 @@
     background-color: $color-black-light-1;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
     transition: all 0.2s ease;
+
+    @include respond(phone) {
+      padding-left: 5rem;
+    }
 
     &--active {
       color: $color-grey-blue-2;

@@ -2,4 +2,8 @@
   @include clearfix;
   max-width: $grid-width;
   margin: 8rem auto;
+
+  @include respond(tablet) {
+    margin: 0 auto;
+  }
 }

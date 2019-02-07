@@ -11,7 +11,11 @@
     <div class="container">
       <!-- Навигация -->
       <nav class="navigation">
-        <ul class="navigation__list">
+        <button class="navigation__button" type="button" id="nav-toggle">
+          <span class="navigation__icon"></span>
+          <span class="visually-hidden">Меню</span>
+        </button>
+        <ul class="navigation__list" id="nav-list">
           <li class="navigation__item">
             <a class="navigation__link" href="#">Личный кабинет</a>
           </li>
@@ -25,7 +29,7 @@
             <a class="navigation__link navigation__link--dark" href="#">Настройки</a>
           </li>
           <li class="navigation__item">
-            <a class="navigation__link navigation__link--logout navigation__link--dark " href="#">Выйти</a>
+            <a class="navigation__link navigation__link--logout navigation__link--dark" href="#">Выйти</a>
           </li>
         </ul>
       </nav> <!-- Конец Навигация -->

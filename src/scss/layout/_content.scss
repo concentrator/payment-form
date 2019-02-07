@@ -2,4 +2,9 @@
   float: left;
   width: 66.6667%;
   max-width: 64rem;
+
+  @include respond(phone) {
+    width: 100%;
+    max-width: 100%;
+  }
 }

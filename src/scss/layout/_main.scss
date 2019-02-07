@@ -1,4 +1,8 @@
 .main {
   padding: 4.5rem 3rem;
   background-color: $color-grey-light-1;
+
+  @include respond(phone-small) {
+    padding: 3.5rem 2rem;
+  }
 }

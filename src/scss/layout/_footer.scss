@@ -4,6 +4,10 @@
   background-color: $color-grey-dark-1;
   border-bottom: 1px solid $color-black-light-3;
 
+  @include respond(phone-small) {
+    padding: 2rem;
+  }
+
   &__paragraph {
     font-size: 1.2rem;
     line-height: 1.8rem;
