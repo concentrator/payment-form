@@ -21,6 +21,7 @@
     line-height: 2.4rem;
     color: $color-white;
     background-color: $color-black-light-1;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
     transition: all 0.2s ease;
 
     &--active {

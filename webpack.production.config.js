@@ -26,7 +26,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              outputPath: 'img/'
+              outputPath: './img/'
             }
           }
         ]
@@ -37,7 +37,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              outputPath: 'fonts/'
+              outputPath: './fonts/'
             }
           }
         ]
@@ -51,7 +51,12 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: '../'
+            }
+          },
           'css-loader',
           {
             loader: 'postcss-loader',

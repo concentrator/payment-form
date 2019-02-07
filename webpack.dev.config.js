@@ -50,7 +50,12 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: '../'
+            }
+          },
           'css-loader',
           {
             loader: 'postcss-loader',
@@ -77,7 +82,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin('dist'),
     new MiniCssExtractPlugin({
-      filename: './css/style.css'
+      filename: './css/style.css',
     }),
     new HtmlWebpackPlugin({
       title: 'Оплата банковской картой',

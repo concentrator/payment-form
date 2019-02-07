@@ -33,6 +33,7 @@
       <!-- Основной блок -->
       <div class="content">
 
+        <!-- Основное содержимое / оплата -->
         <main class="main payment">
           <table class="payment__info">
             <caption>Информация по оплате:</caption>
@@ -52,22 +53,24 @@
           <!-- Форма оплаты картой -->
 
           <form class="payment__form card-form" action="#" method="POST">
-            <div class="card-form__card">
-              <!-- Лицевая часть карты -->
 
+            <!-- Блок банковской карты -->
+            <div class="card-form__card">
+
+              <!-- Лицевая часть карты -->
               <div class="card-form__side card-form__side--front">
 
                 <fieldset class="card-form__fieldset">
                   <legend class="card-form__label">Номер карты</legend>
                   <div class="card-form__number">
                     <input class="card-form__input card-form__input--digit" type="text" name="card-1"
-                      placeholder="0000" autocomplete="off" maxlength="4">
+                      placeholder="0000" autocomplete="off" maxlength="4" required>
                     <input class="card-form__input card-form__input--digit" type="text" name="card-2"
-                      placeholder="0000" autocomplete="off" maxlength="4">
+                      placeholder="0000" autocomplete="off" maxlength="4" required>
                     <input class="card-form__input card-form__input--digit" type="text" name="card-3"
-                      placeholder="0000" autocomplete="off" maxlength="4">
+                      placeholder="0000" autocomplete="off" maxlength="4" required>
                     <input class="card-form__input card-form__input--digit" type="text" name="card-4"
-                      placeholder="0000" autocomplete="off" maxlength="4">
+                      placeholder="0000" autocomplete="off" maxlength="4" required>
                   </div>
                 </fieldset>
 
@@ -109,7 +112,9 @@
                 </fieldset>
 
                 <label class="visually-hidden" for="card-holder">Имя владельца</label>
-                <input class="card-form__input card-form__input--name" id="card-holder" name="card-holder" type="text" placeholder="Держатель карты">
+                <input class="card-form__input card-form__input--name"
+                  type="text" id="card-holder" name="card-holder"
+                  placeholder="Держатель карты" autocomplete="off" required>
               </div> <!-- Конец Лицевая часть карты -->
 
               <!-- Обратная часть карты -->
@@ -118,15 +123,16 @@
                 <div class="card-form__cvv">
                   <label class="card-form__label" for="card-cvv">Код CVV2 / CVC2</label>
                   <input class="card-form__input card-form__input--cvv" type="text"
-                    id="card-cvv" placeholder="000" maxlength="3">
+                    id="card-cvv" placeholder="000" maxlength="3" required>
+                  <a class="card-form__cvv-tip" href="#"><span class="visually-hidden">Подсказка</span></a>
                 </div>
               </div> <!-- Конец Обратная часть карты -->
 
-            </div>
+            </div> <!-- Конец Блок банковской карты -->
 
-            <button class="button button--blue" type="submit">Оплатить</button>
+            <button class="card-form__submit button button--blue" type="submit">Оплатить</button>
           </form> <!-- Конец Форма оплаты картой -->
-        </main>
+        </main> <!-- Конец Основное содержимое / оплата -->
 
         <!-- Блок подвал -->
         <footer class="footer">
