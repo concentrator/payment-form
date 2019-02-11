@@ -8,11 +8,12 @@
 
 html {
   // 1 rem definition
-  font-size: 62.5%; // 1rem == 10px
+  font-size: 62.5%; // 1rem = 10px
   box-sizing: border-box;
 
-  @include respond(phone-medium) {
-    font-size: 50%;
+  @include respond(phone-small) {
+    font-size: 56.25%; // 1rem = 9px
+    -webkit-text-size-adjust: 100%;
   }
 }
 

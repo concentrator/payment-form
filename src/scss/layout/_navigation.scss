@@ -10,6 +10,8 @@
     min-height: 5rem;
   }
 
+  // Кнопка "Гамбургер"
+
   &__button {
     display: none;
     position: absolute;
@@ -68,22 +70,31 @@
     }
   }
 
+  // Конец Кнопка "Гамбургер"
+
+  &__item {
+    display: block;
+  }
+
   &__list {
     list-style: none;
     border-top: 1px solid $color-black-dark-3;
 
+    // Мобильное меню
 
     @include respond(phone) {
-      display: none;
+      visibility: hidden;
       position: absolute;
       top: 5rem;
-      left: 0;
+      left: -75%;
       width: 75%;
       z-index: 10;
+      transition: 0.5s ease;
+      transition-delay: 0.1s;
 
       &--opened {
-        display: block;
-        animation: moveInLeft 0.5s ease;
+        visibility: visible;
+        left: 0;
       }
     }
   }

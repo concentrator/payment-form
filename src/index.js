@@ -1,15 +1,77 @@
 import './scss/style.scss';
 
-// if (process.env.NODE_ENV === 'production') {
-//   console.log('Production mode');
-// } else if (process.env.NODE_ENV === 'development') {
-//   console.log('Development mode');
-// }
-
-const navButton = document.getElementById('nav-toggle');
-const navList = document.getElementById('nav-list');
+var error;
+var navButton = document.getElementById('nav-toggle');
+var navList = document.getElementById('nav-list');
 
 navButton.onclick = function () {
   navButton.classList.toggle('navigation__button--opened');
   navList.classList.toggle('navigation__list--opened');
 }
+
+var cardNumber = $('#card-form .card-form__input--digit');
+var cvv = $('#card-form .card-form__input--cvv');
+var cardHolder = $('#card-form .card-form__input--name');
+
+var removeAllExceptDigits = function (input) {
+  $(input).val(function(i, val) {
+    return val.replace(/\D+/g, '');
+  });
+}
+
+var validateMinLength = function(min, input) {
+  if ($(input).val().length < min) {
+    $(input).addClass('card-form__input--invalid');
+  } else {
+    $(input).removeClass('card-form__input--invalid');
+  }
+}
+
+var validate = function () {
+  error = 0;
+  if($('.card-form__input--invalid')) {
+    $('.card-form__input--invalid')[0].focus()
+    error = 1;
+  }
+}
+
+$(cardNumber).on('input', function () {
+  var input = $(this);
+  removeAllExceptDigits(input);
+  validateMinLength(4, input);
+
+  if($(this).val().length == $(this).attr('maxlength')) {
+    $(this).next('input').focus();
+  }
+});
+
+$(cvv).on('input', function () {
+  var input = $(this);
+  removeAllExceptDigits(input);
+  validateMinLength(3, input);
+});
+
+$(cardHolder).on('input', function () {
+  var input = $(this);
+  input.val(function(i, val) {
+    return val.replace(/[^A-Za-z ]/, '').toUpperCase();
+  });
+  validateMinLength(4, input);
+});
+
+$('#card-form input:required').each(function () {
+  $(this).on('invalid', function(evt) {
+    evt.preventDefault();
+    $(this).addClass('card-form__input--invalid');
+    $('#card-form input:invalid')[0].focus();
+  });
+});
+
+$('#card-form').on('submit', function (evt) {
+  validate();
+
+  if (error === 1) {
+    evt.preventDefault();
+  }
+
+});

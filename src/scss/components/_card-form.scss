@@ -20,6 +20,10 @@
     display: inline-block;
     width: 13.8rem;
     text-align: left;
+
+    @include respond(phone-small) {
+      width: 13rem;
+    }
   }
 
   &__cvv-tip {
@@ -56,7 +60,6 @@
 
     &--invalid {
       border-color: red;
-      // outline: 1px solid red;
     }
 
     &--digit {
@@ -64,6 +67,16 @@
       width: 6.5rem;
       margin-right: 0.9rem;
       float: left;
+
+      &:not(:last-of-type) {
+        margin-right: 0.9rem;
+      }
+
+      @include respond(phone-small) {
+        &:not(:last-of-type) {
+          margin-right: 0.5rem;
+        }
+      }
     }
 
     &--name {
@@ -135,6 +148,10 @@
       width: 7rem;
       float: left;
       margin-right: 0.9rem;
+
+      @include respond(phone-small) {
+        margin-right: 0.5rem;
+      }
     }
 
     &--year {
@@ -159,6 +176,14 @@
     @include respond(phone) {
       max-width: 60rem;
     }
+
+    @include respond(phone-medium) {
+      max-width: 35rem;
+    }
+
+    @include respond(phone-small) {
+      max-width: 290px;
+    }
   }
 
   &__side {
@@ -172,6 +197,10 @@
       width: 35rem;
       padding-top: 2rem;
       z-index: 1;
+
+      @include respond(phone-medium) {
+        width: 100%;
+      }
     }
 
     &--back {
@@ -193,21 +222,6 @@
         background-color: $color-grey-light-2;
       }
 
-      @include respond(phone-small) {
-        padding: 1rem;
-        right: auto;
-        top: 9.05rem;
-        left: 18.7rem;
-        z-index: 1;
-        width: auto;
-        height: auto;
-        border: none;
-
-        &::before {
-          display: none;
-        }
-      }
-
       @media only screen and (min-width: 45.05em) and (max-width: 56.25em) {
         position: relative;
         width: 35rem;
@@ -219,6 +233,25 @@
         &::before {
           display: none;
         }
+      }
+
+      @include respond(phone-medium) {
+        padding: 0;
+        right: auto;
+        top: 10.1rem;
+        right: 1.5rem;
+        z-index: 1;
+        width: auto;
+        height: auto;
+        border: none;
+
+        &::before {
+          display: none;
+        }
+      }
+
+      @include respond(phone-small) {
+        top: 10rem;
       }
     }
   }

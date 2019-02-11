@@ -56,7 +56,9 @@
 
           <!-- Форма оплаты картой -->
 
-          <form class="payment__form card-form" action="#" method="POST">
+          <form class="payment__form card-form"
+            action="#" method="POST"
+            id="card-form" autocomplete="off">
 
             <!-- Блок банковской карты -->
             <div class="card-form__card">
@@ -68,13 +70,13 @@
                   <legend class="card-form__label">Номер карты</legend>
                   <div class="card-form__number">
                     <input class="card-form__input card-form__input--digit" type="text" name="card-1"
-                      placeholder="0000" autocomplete="off" maxlength="4" required>
+                      placeholder="0000" maxlength="4" required>
                     <input class="card-form__input card-form__input--digit" type="text" name="card-2"
-                      placeholder="0000" autocomplete="off" maxlength="4" required>
+                      placeholder="0000" maxlength="4" required>
                     <input class="card-form__input card-form__input--digit" type="text" name="card-3"
-                      placeholder="0000" autocomplete="off" maxlength="4" required>
+                      placeholder="0000" maxlength="4" required>
                     <input class="card-form__input card-form__input--digit" type="text" name="card-4"
-                      placeholder="0000" autocomplete="off" maxlength="4" required>
+                      placeholder="0000" maxlength="4" required>
                   </div>
                 </fieldset>
 
@@ -118,7 +120,7 @@
                 <label class="visually-hidden" for="card-holder">Имя владельца</label>
                 <input class="card-form__input card-form__input--name"
                   type="text" id="card-holder" name="card-holder"
-                  placeholder="Держатель карты" autocomplete="off" required>
+                  placeholder="Держатель карты" required>
               </div> <!-- Конец Лицевая часть карты -->
 
               <!-- Обратная часть карты -->
@@ -128,7 +130,7 @@
                   <label class="card-form__label" for="card-cvv">Код CVV2 / CVC2</label>
                   <input class="card-form__input card-form__input--cvv" type="text"
                     id="card-cvv" placeholder="000" maxlength="3" required>
-                  <a class="card-form__cvv-tip" href="#"><span class="visually-hidden">Подсказка</span></a>
+                  <a class="card-form__cvv-tip" href="#" title="Подсказка"></a>
                 </div>
               </div> <!-- Конец Обратная часть карты -->
 

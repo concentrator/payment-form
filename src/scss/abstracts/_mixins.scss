@@ -9,7 +9,7 @@
 // MEDIA QUERIES
 
 /*
-320 - 480           Small Phone
+320 - 400           Small Phone
 480 - 600           Medium Phone
 600 - 720           Phone
 720 - 1000          Tablet
@@ -18,7 +18,7 @@
 
 @mixin respond($breakpoint) {
   @if $breakpoint == phone-small {
-    @media only screen and (max-width: 30em) { @content; }  // 480px
+    @media only screen and (max-width: 25em) { @content; }  // 400px
   }
   @if $breakpoint == phone-medium {
     @media only screen and (max-width: 37.5em) { @content; }  // 600px
