@@ -21,7 +21,7 @@
     width: 13.8rem;
     text-align: left;
 
-    @include respond(phone-small) {
+    @include respond(phone-medium) {
       width: 13rem;
     }
   }
@@ -125,7 +125,7 @@
       width: 100%;
       height: 4rem;
       padding: 1rem 1.4rem;
-      padding-right: 2.9rem;
+      padding-right: 0.9rem;
       padding-bottom: 0.9rem;
       border: none;
       box-shadow: none;

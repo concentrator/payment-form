@@ -7,7 +7,7 @@
 git clone git@github.com:concentrator/payment-form.git
 ```
 
-Команда клонирует репозиторий на ваш компьютер и подготовит всё необходимое для старта работы.
+Команда клонирует репозиторий на ваш компьютер.
 
 Для установки окружения используется команда
 
@@ -15,7 +15,7 @@ git clone git@github.com:concentrator/payment-form.git
 npm install
 ```
 
-Для запуска build скрипта
+Для запуска build скрипта выполнить: (итоговые файлы будут в папке /dist/)
 
 ```
 npm run build

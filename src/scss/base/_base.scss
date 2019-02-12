@@ -6,6 +6,8 @@
   box-sizing: inherit;
 }
 
+main, header, footer { display: block; }
+
 html {
   // 1 rem definition
   font-size: 62.5%; // 1rem = 10px

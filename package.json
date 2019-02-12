@@ -41,7 +41,7 @@
     "jquery": "^3.3.1"
   },
   "browserslist": [
-    "IE >= 9",
+    "last 3 IE versions",
     "Firefox >= 40",
     "Chrome >= 40",
     "Safari >= 7",
